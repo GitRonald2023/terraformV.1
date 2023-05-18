@@ -1,7 +1,7 @@
 #Valores de la conexión a AWS
 AWS_REGION            = "us-east-1"
-AWS_ACCESS_KEY_ID     = "AKIAREBT3NXPJB5ZEAFA"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_ACCESS_KEY_ID     = "XXXXXXXXXXXXXXXXX"
+AWS_SECRET_ACCESS_KEY = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 #Valor del  nombre de igw
 nombre-igw = "igw-vpcbootcamp"
 #Valor del bloque direcciones de la VPC
