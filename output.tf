@@ -42,8 +42,8 @@ output "llave-ssh" {
 }
 #Salida para informar la creacion de la instancia bastion 
 output "ec2-bastion" {
-  value = ["ID bastion creado: ${aws_instance.bastion.id}",
-  "Nombre del Bastion: ${aws_instance.bastion.tags.Name}"]
+  value = ["ID bastion creado: ${element(aws_instance.bastion.*.id, 0)}",
+  "Nombre del Bastion: ${element(aws_instance.bastion.*.id, 0)}"]
 }
 #Salida para informar la creacion de la instancia back1-1a
 output "ec2-back1" {
