@@ -1,16 +1,4 @@
 
-#Almacenar ssh-key en parameter store
-#resource "aws_ssm_parameter" "ssh-instances" {
-#  name        = "/proyectofinal/sshkey"
-#  description = "Llave ssh de las instancias EC2"
-#  type        = "SecureString"
-#  value       = aws_key_pair.bootcamp-key.id
-
-#  tags = {
-#    "Name" = "SSH-EC2"
-#    "Prod" = "Front"
-#  }
-#}
 #Creacion de private key para la ssh
 resource "tls_private_key" "privatekey" {
   algorithm = "RSA"
