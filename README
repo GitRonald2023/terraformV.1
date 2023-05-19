@@ -6,6 +6,7 @@ Tabla de enrutamiento publica y privada
 Grupo de seguridad publico y privado
 Instancia Bastion (subnet publica e IP publica)
 Instancias Back 1 y 2 (subnet privada diferente c/u)
+Llave SSH .pem se crea y descarga automaticamente en la ruta de ejecucion de Terraform
 Balanceador de aplicaciones (subnets publicas con visibilidad desde internet)
 Base de datos RDS-MySQL (subnets privadas)
 EFS para informacion permanente (subnet privada)
