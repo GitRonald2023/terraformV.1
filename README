@@ -1,0 +1,15 @@
+Despliegue de infraestructura desde Terraform en AWS
+Inventario
+Un VPC
+Cuatro Subnets (dos publicas(zona de disponibilidad diferente c/u) y dos privadas(zona de disponibilidad diferente c/u))
+Tabla de enrutamiento publica y privada
+Grupo de seguridad publico y privado
+Instancia Bastion (subnet publica e IP publica)
+Instancias Back 1 y 2 (subnet privada diferente c/u)
+Balanceador de aplicaciones (subnets publicas con visibilidad desde internet)
+Base de datos RDS-MySQL (subnets privadas)
+EFS para informacion permanente (subnet privada)
+
+El objetivo es manejar estado remoto de terrafor (en bucket-s3) con estado de bloqueo en BD dynamo, 
+por ello despues de realizar el primer despliegue se "descomentaria" la seccion 'terraform {backend s3}' 
+para que se actualice la configuración de estado de Terraform

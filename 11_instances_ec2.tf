@@ -38,7 +38,7 @@ resource "aws_instance" "back1-1a" {
   key_name                    = var.key_pair_name
   associate_public_ip_address = false
   availability_zone           = data.aws_availability_zones.available.names[count.index]
-  subnet_id                   = element(aws_subnet.public_1a_bootcamp.id, [count.index])
+  subnet_id                   = aws_subnet.public_1a_bootcamp.*.id[count.index]
   tenancy                     = "default"
   security_groups             = [aws_security_group.sg-private.id]
   tags = {

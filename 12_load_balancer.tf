@@ -31,7 +31,7 @@ resource "aws_lb" "alb-app-bootcamp" {
   internal                   = false
   load_balancer_type         = "application"
   security_groups            = [aws_security_group.sec_group_public.id]
-  subnets                    = ["element(aws_subnet.public_1a_bootcamp.*.id, 0)", "element(aws_subnet.public_1b_bootcamp.*.id, 1)"]
+  subnets                    = ["${element(aws_subnet.public_1a_bootcamp.*.id,0)}","${element(aws_subnet.public_1a_bootcamp.*.id,1)}"]
   enable_deletion_protection = false
   access_logs {
     bucket  = aws_s3_bucket.alb-logs.id
